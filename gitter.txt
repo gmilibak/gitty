@@ -1,5 +1,4 @@
-Új első sor, hogy két hunk legyen
-
+Ezt itt végre conflictolom a gallyal.
 
 Verziókezelés
 
