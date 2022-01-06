@@ -1,0 +1,4 @@
+Ismét egy új fájl.
+  - ez magában lesz az új branchen
+  - ezután masterre kerül új fájl
+  - és végül mehetnek a merge-k és conflictok
