@@ -1,1 +1,4 @@
 Verziókezelés
+
+
+ezt pushold, az első hunkot ne
