@@ -1,6 +1,0 @@
-Ezt itt végre conflictolom a gallyal.
-
-Verziókezelés
-
-
-ezt pushold, az első hunkot ne
