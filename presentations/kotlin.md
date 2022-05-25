@@ -11,6 +11,8 @@ https://blog.jetbrains.com/kotlin/2011/08/why-jetbrains-needs-kotlin/
 ### Basic syntax
 - similarities
   - `package`, `import`
+  - `private`, `protected`, `public`
+    - but `internal`: module-private
 - `main` function:
   ~~~
   fun main(args: Array<String>) {
@@ -34,8 +36,14 @@ fun fail(message: String): Nothing {
 ~~~
 
 ### Syntactic sugar
-- smart casts
-  - the compiler deduces type
+- class properties
+  - default getters and setters (only getters for `val`)
+- high level methods for handling collections
+  - mapOf(), listOf(), setOf() etc. methods
+  - builders for collection-creation
+  - Streams-like collection operations
+- data class
+- elvis operator
 - ranges
   - `0..n` = `0 <= i <= n`
     - actually `0.rangeTo(n)`
@@ -50,22 +58,13 @@ fun fail(message: String): Nothing {
     print i
   }
   ~~~
-- class properties
-  - default getters and setters (only getters for `val`)
-- high level methods for handling collections
-  - mapOf(), listOf(), setOf() etc. methods
-  - builders for collection-creation
-  - Streams-like collection operations
-- Sequence
-  - same functions as Iterable but different approach
-  - lazy execution of processing
-- data class
-- elvis operator
 - companion object
   - declared inside a class
   - a static inner class with a single instance
 
 ### (Some) of the "little" differences
+- smart casts
+  - the compiler deduces type
 - null safety (`String` vs `String?`)
   - cannot attribute null values by default
 - classes are final by default
@@ -73,6 +72,9 @@ fun fail(message: String): Nothing {
   - similar for functions and properties
 - extension function
   - provide new functionality to a class without inheriting
+- Sequence
+  - same functions as Iterable but different approach
+  - lazy execution of processing
 - coroutines
   - lightweight threads without actual thread handling
   - needs a `CoroutineScope`: this is usually declared at the top-most level
@@ -83,10 +85,15 @@ fun fail(message: String): Nothing {
 - `when` instead of `switch`
 - named arguments
   - using the name of an argument, default valued arguments can be skipped
+- `typealias` keyword
+  - to shorten long types
+  - `typealias Synonyms<String> = MutableMap<String, List<String>>`
 - String templates
 - `$` and `${}`
 - triple quoted String literals
   - raw strings, can contain newline and special characters
+- `===`: referential equality
+  - two references point to the same object
 
 ### Impressions
 - streams and lambdas everywhere
