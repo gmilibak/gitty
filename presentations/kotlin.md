@@ -1,12 +1,5 @@
 ## Kotlin through the Java lens
 
-### Impressions
- - streams and lambdas everywhere
- - more concise
- - more syntactic sugar
- - tries to live without null
-
-
 ### Goal of the creators (at JetBrains):
 https://blog.jetbrains.com/kotlin/2011/08/why-jetbrains-needs-kotlin/
 - increase internal productivity while
@@ -71,21 +64,33 @@ fun fail(message: String): Nothing {
 - companion object
   - declared inside a class
   - a static inner class with a single instance
-- extension function
 
-### The little differences
-- if is an expression with return value
-  - if block of code then the last expression is the value
-- `when` instead of `switch`
+### (Some) of the "little" differences
+- null safety (`String` vs `String?`)
+  - cannot attribute null values by default
 - classes are final by default
   - `open` modifier make it inheritable
   - similar for functions and properties
+- extension function
+  - provide new functionality to a class without inheriting
+- coroutines
+  - lightweight threads without actual thread handling
+  - needs a `CoroutineScope`: this is usually declared at the top-most level
+- no checked exceptions
+- no widening type inference
+- if is an expression with return value
+  - if block of code then the last expression is the value
+- `when` instead of `switch`
 - named arguments
   - using the name of an argument, default valued arguments can be skipped
-- triple quoted string
+- String templates
+- `$` and `${}`
+- triple quoted String literals
   - raw strings, can contain newline and special characters
 
-### Added values
+### Impressions
+- streams and lambdas everywhere
+- more concise
+- more syntactic sugar
+- tries to live without null
 - `val` encourages more immutable code
-
-### Disadvantages
