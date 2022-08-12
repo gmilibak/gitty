@@ -18,8 +18,6 @@ Közegek áramlása csőben
 - Bernoulli egyenlet összenyomhatatlan folyadékok esetén
 ### $p + \rho * g * h + 1/2 \rho * v^{2}$
 
-
-### $
 - Reynolds szám
 ### $Re = \displaystyle \frac{\rho * v * L}{\mu}$
 
